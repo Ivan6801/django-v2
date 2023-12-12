@@ -17,7 +17,6 @@ def hello_world(request):
 
 def sort_integers(request):
     """Return a JSON response with sorted integers."""
-    # http://127.0.0.1:8081/sorted/?numbers=10,4,50,32
     numbers = [int(i) for i in request.GET['numbers'].split(',')]
     sorted_ints = sorted(numbers)
     data = {
